@@ -20,11 +20,11 @@
             <!--Connect tab-->
             <TabItem Header="Connect">
                 <StackPanel Orientation="Horizontal">
-                    <TextBox Text="{Binding ConnectionString}"
+                    <TextBox Text="{Binding DatabaseLocation}"
                              HorizontalAlignment="Stretch"
                              VerticalAlignment="Center"
                              Margin="5, 3"
-                             MinWidth="200"/>
+                             MinWidth="200" />
 
                     <Button Content="..."
                             Width="20"
@@ -41,10 +41,22 @@
             
             <!--Create tab-->
             <TabItem Header="Create">
-                <Button Content="Create a new Database"
-                        Command="{Binding CreateDBCommand}"
-                        Height="30"
-                        Margin="5"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Name:"
+                           VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="TbxNewDBName"
+                             Width="200"
+                             Height="20"
+                             Text="{Binding DatabaseNewName}" />
+
+                    <Button Content="Create a new Database"
+                            Command="{Binding CreateDBCommand}"
+                            Height="20"
+                            Margin="5"
+                            Padding="5, 0"/>    
+                </StackPanel>
+                
             </TabItem>
         </TabControl>
         

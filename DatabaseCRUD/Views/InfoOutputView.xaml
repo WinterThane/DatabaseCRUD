@@ -3,8 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModel="clr-namespace:DatabaseCRUD.ViewModels"
              xmlns:local="clr-namespace:DatabaseCRUD.Views"
              mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <viewModel:InfoOutputViewModel />
+    </UserControl.DataContext>
 
     <UserControl.Resources>
         <Style TargetType="TextBlock">
@@ -17,11 +22,11 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="300" />
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0"
-                   Text="aaa"
+                   Text="{Binding InfoRollingText}"
                    Padding="5, 0"
                    TextWrapping="Wrap"
                    ScrollViewer.VerticalScrollBarVisibility="Auto" />
