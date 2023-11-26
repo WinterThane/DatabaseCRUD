@@ -16,35 +16,18 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
 
-        <local:DatabaseConnectionView Grid.Row="0"
-                                      Grid.Column="0"
-                                      Grid.ColumnSpan="2" />
+        <local:DatabaseConnectionView Grid.Row="0" />
 
-        <TextBlock Grid.Row="1"
-                   Grid.Column="0"
-                   Text="aaaaa" />
+        <local:DatabaseTablesView Grid.Row="1" />
         
-        <TextBlock Grid.Row="1"
-                   Grid.Column="1"
-                   Text="bbbbb" />
+        <local:DatabaseTablesColumnsView Grid.Row="2" />
 
-        <TextBlock Grid.Row="2"
-                   Grid.Column="0"
-                   Text="ccccc" />
+        <local:DatabaseTablesEditView Grid.Row="3" />
 
-        <TextBlock Grid.Row="2"
-                   Grid.Column="1"
-                   Text="ddddd" />
-
-        <local:InfoOutputView Grid.Row="3"
-                              Grid.Column="0"
-                              Grid.ColumnSpan="2" />
+        <local:InfoOutputView Grid.Row="5" />
     </Grid>
 </UserControl>

@@ -29,6 +29,7 @@
                     <Button Content="..."
                             Width="20"
                             Height="20"
+                            ToolTip="Browse files"
                             Command="{Binding SearchFileCommand}" />
 
                     <Button Content="Connect"

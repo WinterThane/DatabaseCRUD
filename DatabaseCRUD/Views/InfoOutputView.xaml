@@ -22,11 +22,11 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="300" />
+            <RowDefinition Height="200" />
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0"
-                   Text="{Binding InfoRollingText}"
+                   Text="xxx"
                    Padding="5, 0"
                    TextWrapping="Wrap"
                    ScrollViewer.VerticalScrollBarVisibility="Auto" />

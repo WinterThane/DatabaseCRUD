@@ -5,9 +5,6 @@ namespace DatabaseCRUD.Utils
 {
     public static class Logger
     {
-        private static readonly string LogFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log");
-        private static string LogFilePath = Path.Combine(LogFolderPath, $"{DateTime.Now:yyyy-MM}.log");
-
         public enum ErrorType
         {
             DEBUG,
@@ -17,6 +14,9 @@ namespace DatabaseCRUD.Utils
             SEVERE,
             CRITICAL
         }
+
+        private static readonly string LogFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log");
+        private static string LogFilePath = Path.Combine(LogFolderPath, $"{DateTime.Now:yyyy-MM}.log"); 
 
         public static void Log(string message, Exception ex, ErrorType errorType)
         {

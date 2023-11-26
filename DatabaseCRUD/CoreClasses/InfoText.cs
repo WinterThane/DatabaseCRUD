@@ -25,7 +25,7 @@ namespace DatabaseCRUD.CoreClasses
             return result;
         }
 
-        public static void CleanCombatText()
+        public static void CleanInfoText()
         {
             ListOfTextRows.Clear();
         }

@@ -13,28 +13,19 @@ namespace DatabaseCRUD.ViewModels
         public ICommand? SearchFileCommand { get; private set; }
         public ICommand? ConnectCommand { get; private set; }
         public ICommand? CreateDBCommand { get; private set; }
-        public string? InfoTextDatabase { get; set; }
 
         private string? _databaseLocation;
         public string? DatabaseLocation 
         {
             get => _databaseLocation;
-            set
-            {
-                _databaseLocation = value;
-                OnPropertyChanged(nameof(DatabaseLocation));
-            }
+            set { _databaseLocation = value; OnPropertyChanged(nameof(DatabaseLocation)); }
         }
 
         private string? _databaseNewName;
         public string? DatabaseNewName
         {
             get => _databaseNewName;
-            set
-            {
-                _databaseNewName = value;
-                OnPropertyChanged(nameof(DatabaseNewName));
-            }
+            set { _databaseNewName = value; OnPropertyChanged(nameof(DatabaseNewName)); }
         }
 
         public DatabaseConnectionViewModel()
@@ -81,8 +72,8 @@ namespace DatabaseCRUD.ViewModels
                 try
                 {
                     DatabaseFunctions.CreateDatabase(DatabaseNewName);
+                    MessageBox.Show($"New database created. Name: {DatabaseNewName}");
                     Logger.Log($"New database created. Name: {DatabaseNewName}", Logger.ErrorType.INFO);
-                    InfoTextDatabase = InfoText.InfoTextResult($"New database created. Name: {DatabaseNewName}");
                 }
                 catch (Exception ex)
                 {
